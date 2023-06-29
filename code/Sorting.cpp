@@ -32,21 +32,21 @@ Sorting::~Sorting(){
 
 void Sorting::quicksort(vector<int>& data, int low_idx, int high_idx){
 
-   // Base case: If the partition size is 1 or zero 
-   // elements, then the partition is already sorted
-   if (low_idx >= high_idx) {
-      return;
-   }
+  // Base case: If the partition size is 1 or zero 
+  // elements, then the partition is already sorted
+  if (low_idx >= high_idx) {
+    return;
+  }
    
-   // Partition the data within the array. Value lowEndIndex 
-   // returned from partitioning is the index of the low 
-   // partition's last element.
-   int lowEndIndex = quicksort_partition(data, low_idx, high_idx);
+  // Partition the data within the array. Value lowEndIndex 
+  // returned from partitioning is the index of the low 
+  // partition's last element.
+  int lowEndIndex = quicksort_partition(data, low_idx, high_idx);
    
-   // Recursively sort low partition (low_idx to lowEndIndex) 
-   // and high partition (lowEndIndex + 1 to high_idx)
-   quicksort(data, low_idx, lowEndIndex);
-   quicksort(data, lowEndIndex + 1, high_idx);
+  // Recursively sort low partition (low_idx to lowEndIndex) 
+  // and high partition (lowEndIndex + 1 to high_idx)
+  quicksort(data, low_idx, lowEndIndex);
+  quicksort(data, lowEndIndex + 1, high_idx);
 
 }
 
@@ -93,13 +93,13 @@ void Sorting::bubblesort(vector<int>& data){
   int numbersSize = data.size();
   for (int i = 0; i < numbersSize - 1; i++) {
       for (int j = 0; j < numbersSize - i - 1; j++) {
-         if (data[j] > data[j+1]) {
-            int temp = data[j];
-            data[j] = data[j + 1];
-            data[j + 1] = temp;
-         }
+        if (data[j] > data[j+1]) {
+          int temp = data[j];
+          data[j] = data[j + 1];
+          data[j + 1] = temp;
+        }
       }
-   }
+  }
 }
 
 
